@@ -1,0 +1,41 @@
+name:               attoparsec-expression
+version:            0.1
+category:           Text, Parsing
+synopsis:           Lens GUI Toolkit Plot Demo
+description:
+    A helper module to parse "expressions".
+    Builds a parser given a table of operators and associativities.
+stability:          experimental
+license:            BSD3
+license-file:       LICENSE
+author:             Pék Dániel, Edward A. Kmett
+homepage:           https://github.com/pdani/attoparsec-expression
+maintainer:         pekdaniel@gmail.com
+cabal-version:      >= 1.10
+build-type:         Simple
+extra-source-files: changelog
+
+source-repository head
+  type:             git
+  location:         https://github.com/pdani/lgtk-plot-demo.git
+
+library
+  build-depends:
+                    base < 5
+                  , attoparsec
+                  , bytestring
+
+  hs-source-dirs:
+                    src
+
+  exposed-modules:
+                    Data.Attoparsec.Expression
+
+  ghc-options:
+                    -Wall 
+                    -fno-warn-incomplete-patterns 
+                    -fno-warn-name-shadowing 
+                    -fno-warn-missing-signatures 
+                    -fno-warn-orphans
+                    -fno-warn-type-defaults
+
